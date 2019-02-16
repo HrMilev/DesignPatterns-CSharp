@@ -13,14 +13,14 @@ namespace DecoratorPattern
         static void Main(string[] args)
         {
             DecorationObject o = new DecorationObject();
-            View("Ohh ", o);
+            View("O ", o);
             TheDecoratorA a = new TheDecoratorA(o);
-            View("Hehe ", a);
+            View("H ", a);
             TheDecoratorB b = new TheDecoratorB(o);
-            View("Uraa ", b);
-            TheDecoratorB bb = new TheDecoratorB(a);
-            View("Pfff ", bb);
-            View(bb.addedState+bb.AddedBehavior(),bb );
+            View("U ", b);
+            TheDecoratorB ba = new TheDecoratorB(a);
+            View("P ", ba);
+            View(ba.addedState+ba.AddedBehavior(),ba );
 
         }
     }
