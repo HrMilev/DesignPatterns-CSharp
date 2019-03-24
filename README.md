@@ -1,2 +1,2 @@
 # DesignPatterns-CSharp
-Quote: Successful programmer - good programming language and design patterns.
+Quote: Successful programmer - good understanding of language and design patterns.
