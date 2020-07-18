@@ -1,0 +1,13 @@
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\bin\Debug\netcoreapp3.1\TemplateMethod.exe
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\bin\Debug\netcoreapp3.1\TemplateMethod.deps.json
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\bin\Debug\netcoreapp3.1\TemplateMethod.runtimeconfig.json
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\bin\Debug\netcoreapp3.1\TemplateMethod.runtimeconfig.dev.json
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\bin\Debug\netcoreapp3.1\TemplateMethod.dll
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\bin\Debug\netcoreapp3.1\TemplateMethod.pdb
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\obj\Debug\netcoreapp3.1\TemplateMethod.csprojAssemblyReference.cache
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\obj\Debug\netcoreapp3.1\TemplateMethod.AssemblyInfoInputs.cache
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\obj\Debug\netcoreapp3.1\TemplateMethod.AssemblyInfo.cs
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\obj\Debug\netcoreapp3.1\TemplateMethod.csproj.CoreCompileInputs.cache
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\obj\Debug\netcoreapp3.1\TemplateMethod.dll
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\obj\Debug\netcoreapp3.1\TemplateMethod.pdb
+E:\Desktop\GitHub\DesignPatterns-CSharp\DesignPatterns-CSharp\TemplateMethod\obj\Debug\netcoreapp3.1\TemplateMethod.genruntimeconfig.cache
