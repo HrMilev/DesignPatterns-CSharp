@@ -1,4 +1,7 @@
-﻿public interface IObserver
+﻿namespace Observer
 {
-    void ReceivePost(string name, string text);
+    public interface IObserver
+    {
+        void Update(EventArg eventArg);
+    }
 }

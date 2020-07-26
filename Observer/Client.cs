@@ -1,23 +1,21 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Observer
 {
-    static void Main(string[] args)
+    public class Client
     {
-        Blogger blogger = new Blogger("Georgio");
-        Observer observerF = new Observer("Peter");
-        Observer observerS = new Observer("Jilia");
-        Observer observerT = new Observer("Helen");
+        //In cases when event happens and it is needed some external
+        //notifications to be done (DB, Network etc.), Observer can help
+        public static void Main()
+        {
+            IButtonSubject buttonSubject = new ButtonSubject();
+            IObserver observer = new Observer("DbConnector");
+            IObserver observer2 = new Observer("NetworkConnector");
 
-        blogger.Subscribe(observerF);
-        blogger.Subscribe(observerS);
-        blogger.Subscribe(observerT);
-        blogger.MakePost("I was in the kitchen today, it was fun.");
-        Console.WriteLine();
-        blogger.Unsubscribe(observerT);
-        blogger.MakePost("I have a nice day in the living room.");
+            buttonSubject.AddObserver(observer);
+            buttonSubject.AddObserver(observer2);
+
+            buttonSubject.Click();
+        }
     }
 }
