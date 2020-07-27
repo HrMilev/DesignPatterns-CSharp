@@ -8,14 +8,17 @@ namespace Observer
         //notifications to be done (DB, Network etc.), Observer can help
         public static void Main()
         {
-            IButtonSubject buttonSubject = new ButtonSubject();
-            IObserver observer = new Observer("DbConnector");
-            IObserver observer2 = new Observer("NetworkConnector");
+            Func<ActionEnum, int, IAction> actionCreator = (a, p) => new MyAction(a, p);
 
-            buttonSubject.AddObserver(observer);
-            buttonSubject.AddObserver(observer2);
+            IReduxer redux = new Reduxer();
+            IReducer observer = new Reducer();
 
-            buttonSubject.Click();
+            redux.AddObserver(observer);
+
+            redux.Dispatch(actionCreator(ActionEnum.Add, 5));
+            redux.Dispatch(actionCreator(ActionEnum.Subtract, 5));
+
+            Console.WriteLine(redux.State);
         }
     }
 }
