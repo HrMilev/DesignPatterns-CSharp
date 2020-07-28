@@ -1,16 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Facade
 {
-    static void Main(string[] args)
+    public class Client
     {
-        var builder = new Builder();
+        //It’s especially useful when working with complex libraries and APIs
+        static void Main()
+        {
+            var pan = new Pan();
+            var stove = new Stove(pan);
+            var chicken = new Chicken();
+            ICookingFacade facade = new CookingFacade(stove, pan, chicken);
 
-        builder.BuildSteelHouse();
-        builder.BuildTimberHouse();
+            Console.WriteLine(facade.GetChickenOnStove());
+        }
     }
 }
