@@ -1,18 +1,34 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
-class Client
+namespace FactoryMethod
 {
-    static void Main(string[] args)
+    public class Client
     {
-        var baker = new Baker();
-
-        for (int i = 0; i < 15; i++)
+        public static void Main()
         {
-            ICake cake = baker.MakeCakeFactoryMethod(i);
-            cake.Type();
+            Console.WriteLine("Pick something: 1 - Bread, 2 - Biscuit");
+            int.TryParse(Console.ReadLine(), out int type);
+
+            while (type < 1 || type > 2)
+            {
+                int.TryParse(Console.ReadLine(), out type);
+            }
+
+            IFactory factory = null;
+
+            if (type == 1)
+            {
+                factory = new BreadFactory();
+            }
+            else
+            {
+                Console.WriteLine("Add your secret biscuit ingredient: ");
+                string secret = Console.ReadLine();
+                factory = new BiscuitFactory(secret);
+            }
+
+            IBakedGood bakedGood = factory.GetSomeGood();
+            Console.WriteLine(bakedGood.WhatAmI());
         }
     }
 }
