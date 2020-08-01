@@ -1,27 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DecoratorPattern
+namespace Decorator
 {
-    class Client
+    public class Client
     {
-        static void View(string s, IDecorationObject obj) => Console.WriteLine(s + obj.Operation());
-
-        static void Main(string[] args)
+        public static void Main()
         {
-            DecorationObject o = new DecorationObject();
-            View("O ", o);
-            TheDecoratorA a = new TheDecoratorA(o);
-            View("H ", a);
-            TheDecoratorB b = new TheDecoratorB(o);
-            View("U ", b);
-            TheDecoratorB ba = new TheDecoratorB(a);
-            View("P ", ba);
-            View(ba.addedState+ba.AddedBehavior(),ba );
+            IPerson person = new Person { FirstName = "working", LastName = "hard" };
+            Console.WriteLine(person.HowAmI());
 
+            Console.WriteLine("And i just get a new exciting job ...");
+            person = new Employee(person) { WorkPlace = "Fancy Co." };
+            Console.WriteLine(person.HowAmI());
+
+            Console.WriteLine("And after few years ...");
+            person = new Manager(person);
+            Console.WriteLine(person.HowAmI());
         }
     }
 }
