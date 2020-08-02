@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Strategy
 {
     public class Client
@@ -11,16 +12,11 @@ namespace Strategy
                 Int = 777
             };
 
-            ISerializerStrategy serializerStrategy = new XMLSerializer();
-            //This is the class which we can modify run time (although this is the case)
-            var objectToStringMaker = new ObjectToStringMaker(serializerStrategy, '*');
-
-            Console.WriteLine(objectToStringMaker.GetString(data));
-
-            objectToStringMaker.Serializer = new JSONSerializer();
-            objectToStringMaker.Separator = '#';
-
-            Console.WriteLine(objectToStringMaker.GetString(data));
+            //This is the class which we can modify run time 
+            var objectToStringMaker = new ObjectToStringMaker('*');
+            Console.WriteLine("1 - XML, 2 - JSON :");
+            StrategyType strategyType = (StrategyType)int.Parse(Console.ReadLine());
+            Console.WriteLine(objectToStringMaker.GetString(data, strategyType));
         }
     }
 }
