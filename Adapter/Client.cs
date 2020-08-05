@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Adapter
 {
-    static void Main(string[] args)
+    public class Client
     {
-        int story = 5;
-        Console.WriteLine("Before:");
-        var old = new OldHouse();
-        Console.WriteLine(old.With(story));
-
-        Console.WriteLine();
-
-        Console.WriteLine("After:");
-        IRenovator ren = new NewOldHouse();
-        Console.WriteLine(ren.WithNew(story));
+        public static void Main()
+        {
+            var fileAdapter = new FileAdapter();
+            Console.WriteLine(fileAdapter.ReadFromFile("../../../README.md"));
+        }
     }
 }
