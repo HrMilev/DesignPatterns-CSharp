@@ -1,3 +1,4 @@
-# Visitor pattern
+﻿# Visitor pattern
 
-The Visitor pattern defines and performs new operations on all elements of an existing structure, without altering its classes.
+It separates an algorithms from structure of objects on which it operates.
+Adds new operations to existing structures without modifying it.
