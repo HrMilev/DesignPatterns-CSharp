@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Iterator
 {
-    static void Main(string[] args)
+    public class Client
     {
-        CakeList<string> cakes = new CakeList<string>(3);
-        cakes[0] = "vanila";
-        cakes[1] = "strawberry";
-        cakes[2] = "apple";
-        IIterator<string> iterator = cakes.GetIterator();
-        while (iterator.IstFinished())
+        public static void Main()
         {
-            Console.WriteLine(iterator.Next());
+            var tree = new CompleteBinaryTree<int>(1);
+            tree.AddNode(2).AddNode(3).AddNode(5).AddNode(7).AddNode(11).AddNode(13).AddNode(17);
+            IIterator<int> iterator = tree.GetIterator();
+
+            while (iterator.HasNext)
+            {
+                Console.WriteLine(iterator.Current());
+            }
         }
     }
 }

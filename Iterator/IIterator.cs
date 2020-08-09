@@ -1,6 +1,8 @@
-﻿public interface IIterator<T>
+﻿namespace Iterator
 {
-    T Next();
-    bool IstFinished();
-    T Current();
+    public interface IIterator<T>
+    {
+        bool HasNext { get; }
+        T Current();
+    }
 }

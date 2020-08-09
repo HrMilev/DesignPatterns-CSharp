@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Command", "Command\Command.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{11B97943-6FC2-4369-BC91-1CC658AF1DE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "Visitor\Visitor.csproj", "{DCE63889-A7EB-4B4B-B498-A642466AF0EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Visitor", "Visitor\Visitor.csproj", "{DCE63889-A7EB-4B4B-B498-A642466AF0EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{11B96625-7C13-4F96-AB8E-119B310180D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{DCE63889-A7EB-4B4B-B498-A642466AF0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCE63889-A7EB-4B4B-B498-A642466AF0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCE63889-A7EB-4B4B-B498-A642466AF0EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B96625-7C13-4F96-AB8E-119B310180D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B96625-7C13-4F96-AB8E-119B310180D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B96625-7C13-4F96-AB8E-119B310180D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B96625-7C13-4F96-AB8E-119B310180D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
