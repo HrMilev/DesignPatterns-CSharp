@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Visitor", "Visitor\Visitor.csproj", "{DCE63889-A7EB-4B4B-B498-A642466AF0EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{11B96625-7C13-4F96-AB8E-119B310180D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "Iterator\Iterator.csproj", "{11B96625-7C13-4F96-AB8E-119B310180D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Composite.csproj", "{47427F68-8B47-4EF1-B7FD-A554F20B95BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{11B96625-7C13-4F96-AB8E-119B310180D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11B96625-7C13-4F96-AB8E-119B310180D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11B96625-7C13-4F96-AB8E-119B310180D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47427F68-8B47-4EF1-B7FD-A554F20B95BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47427F68-8B47-4EF1-B7FD-A554F20B95BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47427F68-8B47-4EF1-B7FD-A554F20B95BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47427F68-8B47-4EF1-B7FD-A554F20B95BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

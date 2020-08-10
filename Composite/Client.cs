@@ -1,30 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Composite
 {
-    static void Main(string[] args)
+    public class Client
     {
-        IComponent<string> pictureFirst = new Component<string>("Me on the Beach");
-        IComponent<string> pictureSecond = new Component<string>("Me on the Mountin");
-        IComponent<string> pictureThird = new Component<string>("Me on the Tree");
+        public static void Main()
+        {
+            var el1 = new SimpleHTMLElement("Header", "h1");
+            var el2 = new SimpleHTMLElement("Paragraph", "p");
+            var el3 = new HTMLElement("body");
+            el3.Add(el1);
+            el3.Add(el2);
+            var el4 = new HTMLElement("head");
+            var el5 = new SimpleHTMLElement("Title", "title");
+            el4.Add(el5);
+            var el6 = new HTMLElement("html");
+            el6.Add(el4);
+            el6.Add(el3);
 
-        IComponent<string> album = new Composite<string>("Dream album");
-
-        album.Add(pictureFirst);
-        album.Add(pictureSecond);
-        album.Add(pictureThird);
-
-        Console.WriteLine(album.Display(5));
-
-        album.Remove("Me on the Beach");
-
-        Console.WriteLine();
-
-        Console.WriteLine(album.Display(5));
-
+            Console.WriteLine(el6.Generate());
+        }
     }
 }
