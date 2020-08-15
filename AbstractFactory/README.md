@@ -1,4 +1,4 @@
-# Abstract Factory Pattern
+﻿# Abstract Factory Pattern
 
 This pattern supports the creation of products that exist in families and are designed
 to be produced together. The pattern isolates the product definitions and their class names from the

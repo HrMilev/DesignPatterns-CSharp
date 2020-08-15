@@ -1,16 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-partial class Program
+namespace AbstractFactory
 {
-
-    static void Main(string[] args)
+    public class Client
     {
-        new BuyStaff<Philips>().Now();
-        Console.WriteLine();
-        new BuyStaff<Sharp>().Now();
+        public static void Main()
+        {
+            FactoryEnum selectedFactory = (FactoryEnum)Enum.Parse(typeof(FactoryEnum), Console.ReadLine());
+            IVehicleFactory factory = GetFactory(selectedFactory);
+            ICar car = factory.GetCar();
+            Console.WriteLine(car.Type());
+            ITruck truck = factory.GetTruck();
+            Console.WriteLine(truck.Type());
+        }
+
+        private static IVehicleFactory GetFactory(FactoryEnum selectedFactory) => 
+            selectedFactory switch
+            {
+                FactoryEnum.Alset => new AlsetFactory(),
+                FactoryEnum.WMB => new WMBFactory(),
+                _ => throw new ArgumentOutOfRangeException(),
+            };
     }
 }
