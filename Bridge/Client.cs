@@ -1,18 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Client
+namespace Bridge
 {
-    static void Main()
+    public class Client
     {
-        Abstraction abstractBridge = new Abstraction(new ImpA());
-        Console.WriteLine(abstractBridge.Operation());
-        abstractBridge = new Abstraction(new ImpB());
-        Console.WriteLine(abstractBridge.Operation());
+        public static void Main()
+        {
+            //Before changes of the business logic
+            IDropDownElement element = new TextElement();
+            DropDown dropDown = new ConcreteDropDown(new TextElement());
+            Console.WriteLine(dropDown.Render());
 
+            //Changes are - add some functionallity to DropDowns and unrelated functionallity to Elements
+            Console.WriteLine(element.ShowInfo());
+            Console.WriteLine(dropDown.BeingPretty());
+        }
     }
 }
