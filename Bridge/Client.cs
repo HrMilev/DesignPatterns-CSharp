@@ -11,7 +11,7 @@ namespace Bridge
             DropDown dropDown = new ConcreteDropDown(new TextElement());
             Console.WriteLine(dropDown.Render());
 
-            //Changes are - add some functionallity to DropDowns and unrelated functionallity to Elements
+            //Changes are - add some functionality to DropDowns and unrelated functionality to Elements
             Console.WriteLine(element.ShowInfo());
             Console.WriteLine(dropDown.BeingPretty());
         }
