@@ -1,4 +1,4 @@
-# Chain Of Responsibility
+﻿# Chain Of Responsibility
 
 The Chain of Responsibility pattern works with a list of Handler objects that have
 limitations on the nature of the requests they can deal with. If an object cannot handle
