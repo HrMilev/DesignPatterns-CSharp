@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Builder\Builder.csproj", "{A27ACF32-15E5-40C0-80EE-BA999307E729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResposibility", "ChainOfResposibility\ChainOfResposibility.csproj", "{CC1D307F-8516-4223-B1B5-7ED88EACEE10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResposibility", "ChainOfResposibility\ChainOfResposibility.csproj", "{CC1D307F-8516-4223-B1B5-7ED88EACEE10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{5B54246C-A96B-4BDE-82ED-E2BD5226A7B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{CC1D307F-8516-4223-B1B5-7ED88EACEE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC1D307F-8516-4223-B1B5-7ED88EACEE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC1D307F-8516-4223-B1B5-7ED88EACEE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B54246C-A96B-4BDE-82ED-E2BD5226A7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B54246C-A96B-4BDE-82ED-E2BD5226A7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B54246C-A96B-4BDE-82ED-E2BD5226A7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B54246C-A96B-4BDE-82ED-E2BD5226A7B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

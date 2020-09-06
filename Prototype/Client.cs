@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Prototype
 {
-    static void Main(string[] args)
+    class Client
     {
-        var factory = new CarFactory();
-        Prototype<Car> c2;
+        static void Main(string[] args)
+        {
+            var obj = new SomeClass(Console.ReadLine());
 
-        Console.WriteLine(factory.Cars[0].ToString());
+            var obj2 = obj.Clone();
 
-        c2 = factory.Cars[0].DeepClone();
-        ((Car)c2).Engine.Type = "Benzin";
-        ((Car)c2).Color = "Green";
-        Console.WriteLine(c2.ToString());
-        Console.WriteLine(factory.Cars[0].ToString());
-
+            Console.WriteLine("Are reference equal: " + obj.Equals(obj2));
+            Console.WriteLine("Are prop equal: " + (obj.Prop == obj2.Prop).ToString());
+        }
     }
 }
