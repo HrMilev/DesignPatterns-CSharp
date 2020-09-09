@@ -1,22 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client 
+namespace Proxy
 {
-    static void Main(string[] args)
+    public class Client
     {
-        ISubject subject = new SubjectAccessor.Proxy();
-        Console.WriteLine(subject.Request());
-        Console.WriteLine(subject.Request());
-
-        subject = new SubjectAccessor.ProtectionProxy();
-        Console.WriteLine(subject.Request());
-        Console.WriteLine((subject as SubjectAccessor.ProtectionProxy).Authenticate("gru"));
-        Console.WriteLine((subject as SubjectAccessor.ProtectionProxy).Authenticate("bla"));
-        Console.WriteLine(subject.Request());
-
+        public static void Main()
+        {
+            string input = Console.ReadLine();
+            var db = new DbConnectionProxy("some dependencies");
+            Console.WriteLine(db.Save(input));
+        }
     }
 }
