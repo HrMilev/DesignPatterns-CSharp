@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Flyweight
 {
-    static void Main(string[] args)
+    public class Client
     {
-        var factory = new CarFactory();
-        ICar car = factory.GetCar("blue");
-        car.Show("Ferrari");
-        Console.WriteLine();
-        car = factory.GetCar("blue");
-        car.Show("Porsha");
+        public static void Main()
+        {
+            var factory = new BrickFactory();
+            var b1 = factory.GetBrick(1);
+            var b2 = factory.GetBrick(2);
+
+            Console.WriteLine(b1.Render());
+            Console.WriteLine(b2.Render());
+            Console.WriteLine(b1.AreEqual(b2));
+            Console.WriteLine(b1.ArePicturesEqual(b2));
+        }
     }
 }
