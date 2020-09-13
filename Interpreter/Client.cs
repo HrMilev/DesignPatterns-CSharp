@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
-class Client
+namespace Interpreter
 {
-    static void Main(string[] args)
+    public class Client
     {
-        string input = "5+4-3";
-        Content content = new Content(input);
+        public static void Main()
+        {
+            string input = "5+4-3";
+            Content content = new Content(input);
 
-        Expression expression = new Expression();
+            Expression expression = new Expression();
 
-        expression.Interpret(content);
+            expression.Interpret(content);
 
-        Console.WriteLine(content.Output);
-
+            Console.WriteLine(content.Output);
+        }
     }
 }
-

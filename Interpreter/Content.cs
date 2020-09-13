@@ -1,23 +1,11 @@
-﻿class Content
+﻿public class Content
 {
-    private string input;
-    private double output;
-
     public Content(string input)
     {
-        this.input = input;
+        this.Input = input;
     }
 
-    public string Input
-    {
-        get => input;
-        set => input = value;
-    }
+    public string Input { get; set; }
 
-    public double Output
-    {
-        get => output;
-        set => output = value;
-    }
+    public double Output { get; set; }
 }
-

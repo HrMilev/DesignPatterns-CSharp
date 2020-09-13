@@ -1,3 +1,3 @@
-# Interpreter Pattern
+﻿# Interpreter Pattern
 
-The Interpreter pattern supports the interpretation of instructions written in a language or notation defined for a specific purpose.
+ Interpreter pattern is a design pattern that specifies how to evaluate sentences in a language
